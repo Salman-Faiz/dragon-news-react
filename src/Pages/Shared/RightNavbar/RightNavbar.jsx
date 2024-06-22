@@ -1,37 +1,27 @@
-import { FaFacebook, FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+
+import LoginWith from "./LoginWith";
+import FindUsOn from "./FindUsOn";
+import QZone from "./QZone";
+import bg1 from '../../../assets/bg.png'
 
 const RightNavbar = () => {
     return (
         <div className="p-3">
             {/* Login with */}
-            <div className="space-y-3">
-                <h1 className="text-2xl  font-semibold">Login with</h1>
-
-                <button className="btn btn-outline w-full ">
-                    <FaGoogle className="text-xl" /> Login with Google </button>
-
-                <button className="btn btn-outline w-full ">
-                    <FaGithub className="text-xl" /> Login with Github </button>
-
-            </div>
+            <LoginWith></LoginWith>
 
             {/* find us on */}
-            <div className="border border-1 my-10 bg-white">
-                <h1 className="text-2xl p-3 font-semibold">Find us on</h1>
-                <div className="border flex gap-2 py-1 px-3">
+            <FindUsOn></FindUsOn>
 
-                    <FaFacebook className="text-xl mt-1" /> <h2 className="pt-1">Facebook</h2>
-                </div>
-                <div className="border flex gap-2 py-1 px-3">
-                    <FaTwitter className="text-xl mt-1" /> <h2 className="pt-1">X</h2>
-                </div>
-                <div className="border flex gap-2 py-1 px-3">
-
-                    <FaInstagram className="text-xl mt-1" /> <h2 className="pt-1">Instagram</h2>
-                </div>
-
+            {/* Q-zone */}
+            <QZone></QZone>
+            {/* create newspaper */}
+            <div className="my-10 text-center " >
+                <h2 className="text-3xl">Create An Amazing Newspaper</h2>
+                <p>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+                <button className="btn bg-pink-500">Learn More</button>
             </div>
+
         </div>
     );
 };
