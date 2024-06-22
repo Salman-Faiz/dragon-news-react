@@ -3,6 +3,7 @@ import Header from "../Shared/Header/Header";
 import LeftNavbar from "../Shared/LeftNavbar/LeftNavbar";
 import RightNavbar from "../Shared/RightNavbar/RightNavbar";
 import BreakingNews from "./BreakingNews";
+import MainContent from "./MainContent";
 
 
 const Home = () => {
@@ -13,15 +14,15 @@ const Home = () => {
             <Navbar></Navbar>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-                <div className="">
+               
                     <LeftNavbar></LeftNavbar>
+               
+                <div className="md:col-span-2">
+                    <MainContent></MainContent>
                 </div>
-                <div className="border md:col-span-2">
-                    <h3>coming soon</h3>
-                </div>
-                <div className="">
+              
                     <RightNavbar></RightNavbar>
-                </div>
+               
             </div>
 
         </div>

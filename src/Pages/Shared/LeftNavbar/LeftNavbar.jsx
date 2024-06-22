@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CardsNews from "./CardsNews";
 
 
 const LeftNavbar = () => {
@@ -23,7 +24,12 @@ const LeftNavbar = () => {
             }
            
            </div>
+
            </div>
+
+           {/* cards */}
+        <CardsNews></CardsNews>
+
         </div>
     );
 };
