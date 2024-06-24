@@ -1,39 +1,51 @@
-import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 
 const Login = () => {
+
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password)
+
+
+    }
     return (
-        <div>
+        <div className="">
             <Navbar></Navbar>
-            <h4 className="text-center text-3xl font-bold pt-10 pb-5">Login now</h4>
-      
-                <div className="card w-full max-w-sm shrink-0 shadow-2xl mx-auto">
-                    <form className="card-body">
+            <div className="hero-content flex-col ">
+                <div className="text-center lg:text-left">
+                    <h1 className="text-5xl font-bold">Login now!</h1>
+
+                </div>
+                <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100 ">
+                    <form onSubmit={handleLoginSubmit} className="card-body ">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-2xl">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required />
+                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-2xl">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" required />
+                            <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a href="#" className="label-text-alt link link-hover font-medium text-xl text-red-700">Forgot password?</a>
                             </label>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <p className="p-3">Do not have an account? <Link to={'/register'} className="text-blue-800">Register</Link></p>
+                        <p>Do not have an account? <Link className='text-blue-600' to={'/register'}>Register</Link></p>
                     </form>
-                 
                     
+
                 </div>
-         
+            </div>
         </div>
     );
 };
