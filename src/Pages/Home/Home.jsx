@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Shared/Header/Header";
 import LeftNavbar from "../Shared/LeftNavbar/LeftNavbar";
@@ -7,6 +8,8 @@ import MainContent from "./MainContent";
 
 
 const Home = () => {
+    const news = useLoaderData();
+    console.log(news);
     return (
         <div>
             <Header></Header>
@@ -18,7 +21,7 @@ const Home = () => {
                     <LeftNavbar></LeftNavbar>
                
                 <div className="md:col-span-2">
-                    <MainContent></MainContent>
+                    <MainContent news={news}></MainContent>
                 </div>
               
                     <RightNavbar></RightNavbar>
