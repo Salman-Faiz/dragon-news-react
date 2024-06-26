@@ -4,6 +4,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa";
 import { LiaStarSolid } from "react-icons/lia";
 import { FaEye } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const MainContent = ({news}) => {
     return (
@@ -28,7 +29,7 @@ const MainContent = ({news}) => {
                 
                                 <img  className='pt-5 w-full' src={singleNews.image_url} alt="" />
                                 {
-                                    singleNews.details.length>200 ? <p className='pt-3'>{singleNews.details.slice(0,200)} <span className='text-blue-600 font-bold'>Read More</span></p>  :  <p className='pt-3'>{singleNews.details}</p>
+                                    singleNews.details.length>200 ? <p className='pt-3'>{singleNews.details.slice(0,200)} <Link to={`newsDetails/${singleNews._id}`} className='text-blue-600 font-bold'>Read More</Link></p>  :  <p className='pt-3'>{singleNews.details}</p>
                                 }
                                
                                
